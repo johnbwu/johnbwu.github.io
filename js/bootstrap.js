@@ -1957,50 +1957,52 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   }
   function scrollAction() {
     var curScroll = $(document).scrollTop();
+    clearSelection();
     if (curScroll < hJumbo) {
-      clearSelection();
       $('#home-link').addClass('selected');
     }
-    else if ((curScroll > hJumbo) && (curScroll <= hAbout)) {
-      clearSelection();
+    else if ((curScroll > hJumbo) && (curScroll < hAbout)) {
       $('#about-link').addClass('selected');
     }
     else if ((curScroll > hAbout) && (curScroll < hSkill)){
-      clearSelection();
       $('#skills-link').addClass('selected');
     }
-    else if (curScroll + $(window).height() + 100 > $(document).height()){
-      clearSelection();
+    else if (curScroll + $(window).height() + 100 >= $(document).height()){
       $('#contact-link').addClass('selected');
     }
     else if ((curScroll > hSkill) && (curScroll < hProject)) {
-      clearSelection();
       $('#projects-link').addClass('selected');
     }
 
   };
-  $(document).scroll(scrollAction());
-  $('#home-link').on('click', function() {
-    $('#about-link').prop('selected');
-    $("html, body").animate({ scrollTop: 0 }, "slow");
+  $(document).scroll(function (){
     scrollAction();
   });
 
+  $('#home-link').on('click', function() {
+    $('#about-link').prop('selected');
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
+
   $('#about-link').on('click', function() {
-    $("html, body").animate({ scrollTop: hJumbo }, "slow");
-    scrollAction();
+    clearSelection();
+    $("html, body").animate({ scrollTop: hJumbo + 5}, "slow");
+    $('#about-link').addClass('selected');
   });
   $('#skills-link').on('click', function() {
-    $("html, body").animate({ scrollTop: hAbout }, "slow");
-    scrollAction();
+    clearSelection();
+    $("html, body").animate({ scrollTop: hAbout + 5}, "slow");
+    $('#skills-link').addClass('selected');
   });
   $('#projects-link').on('click', function() {
-    $("html, body").animate({ scrollTop: hSkill }, "slow");
-    scrollAction();
+    clearSelection();
+    $("html, body").animate({ scrollTop: hSkill + 5}, "slow");
+    $('#projects-link').addClass('selected');
   });
   $('#contact-link').on('click', function() {
-    $("html, body").animate({ scrollTop: hProject }, "slow");
-    scrollAction();
+    clearSelection();
+    $("html, body").animate({ scrollTop: hProject + 5}, "slow");
+    $('#contact-link').addClass('selected');
   });
 
 
