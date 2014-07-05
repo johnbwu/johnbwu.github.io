@@ -1963,15 +1963,19 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     }
     else if ((curScroll > hJumbo) && (curScroll < hAbout)) {
       $('#about-link').addClass('selected');
+      $('#about-h').addClass('selected');
     }
     else if ((curScroll > hAbout) && (curScroll < hSkill)){
       $('#skills-link').addClass('selected');
+      $('#skills-h').addClass('selected');
     }
     else if (curScroll + $(window).height() + 100 >= $(document).height()){
       $('#contact-link').addClass('selected');
+      $('#contact-h').addClass('selected');
     }
     else if ((curScroll > hSkill) && (curScroll < hProject)) {
       $('#projects-link').addClass('selected');
+      $('#projects-h').addClass('selected');
     }
 
   };
