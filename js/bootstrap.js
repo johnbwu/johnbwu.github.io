@@ -1955,7 +1955,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   function clearSelection(){
     $('.selected').removeClass('selected');
   }
-  $(document).scroll(function () {
+  function scrollAction() {
     var curScroll = $(document).scrollTop();
     if (curScroll < hJumbo) {
       clearSelection();
@@ -1978,23 +1978,29 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
       $('#projects-link').addClass('selected');
     }
 
-  })
+  };
+  $(document).scroll(scrollAction());
   $('#home-link').on('click', function() {
     $('#about-link').prop('selected');
     $("html, body").animate({ scrollTop: 0 }, "slow");
+    scrollAction();
   });
 
   $('#about-link').on('click', function() {
     $("html, body").animate({ scrollTop: hJumbo }, "slow");
+    scrollAction();
   });
   $('#skills-link').on('click', function() {
     $("html, body").animate({ scrollTop: hAbout }, "slow");
+    scrollAction();
   });
   $('#projects-link').on('click', function() {
     $("html, body").animate({ scrollTop: hSkill }, "slow");
+    scrollAction();
   });
   $('#contact-link').on('click', function() {
     $("html, body").animate({ scrollTop: hProject }, "slow");
+    scrollAction();
   });
 
 
