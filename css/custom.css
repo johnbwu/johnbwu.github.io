@@ -279,7 +279,11 @@ body {
   margin-left: auto;
   width: 3em;
 }
-#contact-section img {
+#contact-section a img {
   height: 3em;
   width: 3em;
+}
+#contact-section a img:hover {
+  width: 5em;
+  height: 5em;
 }
