@@ -1953,11 +1953,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   var hSkill = hAbout + parseInt($('#skill-section').css("height"));
   var hProject = hSkill + parseInt($('#project-section').css("height"));
   function clearSelection(){
-    $('#about-link').removeClass('selected');
-    $('#skills-link').removeClass('selected');
-    $('#projects-link').removeClass('selected');
-    $('#contact-link').removeClass('selected');
-    $('#home-link').removeClass('selected');
+    $('.selected').removeClass('selected');
   }
   $(document).scroll(function () {
     var curScroll = $(document).scrollTop();
