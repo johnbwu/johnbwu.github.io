@@ -1948,7 +1948,13 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     })
   });
 
-  var hJumbo = parseInt($('.jumbotron').css("height")) - parseInt($('.navbar').css("height"));
+  $(document).ready(function () {
+
+    var s = skrollr.init();
+  }
+  );
+
+  var hJumbo = parseInt($('#about-section').css("height")) - parseInt($('.navbar').css("height"));
   var hAbout = hJumbo + parseInt($('#picture-section').css("height"));
   var hSkill = hAbout + parseInt($('#skill-section').css("height"));
   var hProject = hSkill + parseInt($('#project-section').css("height"));
@@ -1987,7 +1993,11 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     $('#about-link').prop('selected');
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
-
+  $('.down-arrow').on('click', function() {
+    clearSelection();
+    $("html, body").animate({ scrollTop: hJumbo + 5}, "slow");
+    $('#about-link').addClass('selected');
+  });
   $('#about-link').on('click', function() {
     clearSelection();
     $("html, body").animate({ scrollTop: hJumbo + 5}, "slow");

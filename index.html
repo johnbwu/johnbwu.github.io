@@ -13,6 +13,7 @@
   </head>
 
   <body>
+    <div class="main-container">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid navbar-container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -32,15 +33,16 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="jumbotron banner-jumbotron">
-        <p class="name"><span class="turq">JOHN</span>WU</p>
+    <div class="section-container container-fluid" id="about-section" class="clearfix">
+        <p class="name" data-0="padding-top:3.5em;" data-500="padding-top:0em;"><span class="turq">JOHN</span>WU</p>
         <p>software engineer</p>
+        <img class="down-arrow" src="arrow.svg"/>
     </div>
 
     <div class="section-container container-fluid" id="picture-section">
       <h1 id="about-h"></h1>
       <div><img id="my-pic" src="john.png"/></div>
-      <div id="my-desc">
+      <div id="my-desc" data-0-center-center="opacity: 1;" data-top="opacity: 0.5">
         <p class="hi">HI! I'M JOHN WU</p>
         <p>and I'm a software engineering and aspiring entrepreneur studying Computer Science at the Universtiy of Waterloo and Business at Wilfrid Laurier University.</p>
         </div>
@@ -82,42 +84,26 @@
     </div>
 
     <div class="section-container container-fluid" id="project-section" >
-      <h1 id="projects-h"><strong>p</strong>rojects + <strong>w</strong>ork</h1>
+      <h1 id="projects-h">PROJECTS + WORK</h1>
+      <ul class="cbp_tmtimeline">
+        <li>
+          <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>Work Market</span></time>
+            <div class="cbp_tmicon"><img src="wm.png" id="wm-img"/></div>
+            <div class="cbp_tmlabel">
+              <h2>Software Engineering Intern<span class="location">New York City</span></h2>
+              <p>Winter purslane...</p>
+            </div>
+        </li>
+        <li>
+          <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>4/11/13</span></time>
+            <div class="cbp_tmicon cbp_tmicon-screen"></div>
+            <div class="cbp_tmlabel">
+              <h2>Greens radish arugula</h2>
+              <p>Caulie dandelion maize...</p>
+            </div>
+        </li>
+      </ul>
 
-      <div class="row" id="wm-row" onclick="window.open('http://www.workmarket.com','mywindow');">
-        <div class="col-md-4"><img src="wm.png" id="wm-img"/></div>
-        <div class="col-md-8">
-          <p class="p-header"><strong>Software Engineer at WorkMarket</strong> - NYC</p>
-          <p><strong>Tech:</strong> Java, Spring MVC, Hibernate, mySQL, jQuery, Javascript, LESS, JSP, Solr, Tomcat, Maven</p>
-          <ul>
-            <li><p>Mainly spearheaded the further development of the platform's forums. Developed the front and back-end for features such as post tagging, post editing, Solr search, and an UI overhaul.<p></li>
-            <li><p>Slew bugs and finished the "Delightful" development project - making UX and functionality improvements in various parts of the app.</p></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row" id="mhacks-row" onclick="window.open('https://github.com/johnbwu/UW-Section-Finder','mywindow');">
-        <div class="col-md-4"><img src="mhacks.png" id="mhacks-img"/></div>
-        <div class="col-md-8">
-          <p class="p-header"><strong>UW Section Finder</strong> - MHacks</p>
-          <p><strong>Tech:</strong> Java, Android, Python, JSON</p>
-          <ul>
-            <li><p>Worked in a team to create an fully offline Android application in 48 hours that allowed users to retrieve course times, locations, and RateMyProfessor scores.<p></li>
-            <li><p>Created the Android frontend and developed the asynchronous method to retreive professor data while minimizing search time.</p></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row" id="fhacks-row" onclick="window.open('https://github.com/skoushan/news-atlas','mywindow');">
-        <div class="col-md-4"><img src="fhacks.png" id="fhacks-img"/></div>
-        <div class="col-md-8">
-          <p class="p-header"><strong>NewsAtlas</strong> - Facebook Waterloo Hackathon</p>
-          <p><strong>Tech: </strong>HTML, JS, CSS, Google Maps API, RSS</p>
-          <ul>
-            <li><p>Worked in a team to create a unique visualization of breaking global news. Used the Reuters RSS feed in combination with the Google Maps API to create a realtime news application that dropped pins where breaking news was occuring.<p></li>
-          </ul>
-        </div>
-      </div>
 
     </div>
 
@@ -141,6 +127,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
     <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/skrollr.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -151,5 +138,6 @@
       ga('send', 'pageview');
 
   </script>
+</div>
   </body>
 </html>
