@@ -23,13 +23,13 @@ body {
   font-family: 'Open Sans';
 }
 .banner-jumbotron {
-  height: 500px;
+  height: 600px;
   background-color: #31cdc7;
   background-image: url(../background.jpg);
   background-repeat: none;
   background-position: center bottom;
   background-size: cover;
-  padding-top: 14em;
+  padding-top: 18em;
   margin-bottom: 0;
 }
 .banner-jumbotron p {
@@ -102,13 +102,12 @@ body {
   position: relative;
 }
 #picture-section #my-pic {
-  height: 27em;
+  height: 30em;
   float: right;
   position: absolute;
   bottom: 0;
 }
 #picture-section #my-desc {
-  height: 250px;
   width: 55%;
   background-color: #ffffff;
   float: right;
@@ -171,6 +170,7 @@ body {
   font-family: HelveticaNeue-Medium;
   font-weight: bold;
   letter-spacing: 4px;
+  font-size: 2em;
 }
 .skillbar {
   position: relative;
