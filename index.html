@@ -42,7 +42,7 @@
     <div class="section-container container-fluid" id="picture-section">
       <h1 id="about-h"></h1>
       <div><img id="my-pic" src="john.png"/></div>
-      <div id="my-desc" data-0-center-center="opacity: 1;" data-top="opacity: 0.5">
+      <div id="my-desc" data-100-top-top="opacity: 1;" data-top="opacity: 0.5em">
         <p class="hi">HI! I'M JOHN WU</p>
         <p>and I'm a software engineering and aspiring entrepreneur studying Computer Science at the Universtiy of Waterloo and Business at Wilfrid Laurier University.</p>
         </div>
@@ -87,19 +87,41 @@
       <h1 id="projects-h">PROJECTS + WORK</h1>
       <ul class="cbp_tmtimeline">
         <li>
-          <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>Work Market</span></time>
+          <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>April to August, 2014</span></time>
             <div class="cbp_tmicon"><img src="wm.png" id="wm-img"/></div>
-            <div class="cbp_tmlabel">
-              <h2>Software Engineering Intern<span class="location">New York City</span></h2>
-              <p>Winter purslane...</p>
+            <div class="cbp_tmlabel" onclick="window.open('http://www.workmarket.com','mywindow');" data-30-top-top="opacity: 1;" data-top-bottom="opacity: 0.7;" data-bottom-bottom="opacity: 0.7;" data-center-center="opacity: 1;">
+              <h2>Software Engineering Intern, Work Market Inc<span class="location">New York City, NY</span></h2>
+              <p><strong>Tech:</strong> Java, Spring MVC, Hibernate, mySQL, jQuery, Javascript, LESS, JSP, Solr, Tomcat, Maven</p>
+              <ul>
+              <li><p>Worked as a software engineering in a TDD oriented company, following the Agile and Scrum methodologies.<p></li>
+              <li><p>Spearheaded the development of the platform's forums, developing the frontend, backend, and test suite.</p></li>
+              <li><p>Developed features such as search, comment editing and post tagging using Spring MVC, Solr, Hibernate, and mySQL.</p></li>
+              <li><p>Designed and implemented a responsive forums UI using jQuery and CSS/LESS.</p></li>
+              <li><p>Architected various test suites, ranging from unit and integration tests with Mockito and JUnit, to acceptance testing with Ruby and Capybara<p></li>
             </div>
         </li>
         <li>
-          <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>4/11/13</span></time>
-            <div class="cbp_tmicon cbp_tmicon-screen"></div>
-            <div class="cbp_tmlabel">
-              <h2>Greens radish arugula</h2>
-              <p>Caulie dandelion maize...</p>
+          <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>February 2014</span></time>
+            <div class="cbp_tmicon"><img src="fhacks.png" id="fhacks-img"/></div>
+            <div class="cbp_tmlabel" onclick="window.open('https://github.com/skoushan/news-atlas','mywindow');" data-30-top-top="opacity: 1;" data-top-bottom="opacity: 0.7;" data-bottom-bottom="opacity: 0.7;" data-center-center="opacity: 1;">
+              <h2>NewsAtlas, Facebook Hackathon<span class="location">Waterloo, ON</span></h2>
+              <p><strong>Tech: </strong>HTML, JS, CSS, Google Maps API, RSS</p>
+              <ul>
+                <li><p>Worked in a team to create a unique visualization of breaking global news in a 48 hour hackathon.</p></li>
+                <li><p>Used the Reuters RSS feed in combination with the Google Maps API to create a realtime news application that dropped pins where breaking news was occuring.<p></li>
+              </ul>
+            </div>
+        </li>
+        <li>
+          <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>January 2014</span></time>
+            <div class="cbp_tmicon"><img src="mhacks.png" id="mhacks-img"/></div>
+            <div class="cbp_tmlabel" onclick="window.open('https://github.com/johnbwu/UW-Section-Finder','mywindow');" data-30-top-top="opacity: 1;" data-top-bottom="opacity: 0.7;" data-bottom-bottom="opacity: 0.7;" data-center-center="opacity: 1;">
+              <h2>Find My Class!, MHacks III <span class="location">Detroit, MI</span></h2>
+              <p><strong>Tech:</strong> Java, Android, Python</p>
+              <ul>
+                <li><p>Worked in a team to create an fully offline Android application in 48 hours that allowed users to retrieve course times, locations, and RateMyProfessor scores for UW courses.<p></li>
+                <li><p>Created the Android frontend and developed the asynchronous method to retreive professor data while minimizing search time.</p></li>
+              </ul>
             </div>
         </li>
       </ul>
@@ -108,7 +130,8 @@
     </div>
 
     <div class="section-container container-fluid" id="contact-section">
-      <h1 id="contact-h"><strong>c</strong>ontact</h1>
+      <div data-bottom-center="margin-top: 3em;" data-bottom-bottom="margin-top: 5em;">
+        <h1 id="contact-h">CONTACT</h1>
         <a href="https://www.linkedin.com/profile/view?id=223184599">
           <img src="linkedin.svg"/>
         </a>
@@ -118,9 +141,8 @@
         <a href="https://www.github.com/johnbwu">
           <img src="github.svg"/>
         </a>
+      </div>
     </div>
-
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -140,4 +162,5 @@
   </script>
 </div>
   </body>
+
 </html>

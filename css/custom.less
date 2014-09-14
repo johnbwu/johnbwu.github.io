@@ -88,11 +88,6 @@ body {
 }
 
 #about-section {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	width: 100%;
 	height: 600px;
 	background-color: @turq;
   background-image: url(../background.jpg);
@@ -163,7 +158,6 @@ body {
 }
 
 #picture-section {
-	margin-top: 600px;
 	background-color: @turq;
 	position: relative;
   #my-pic {
@@ -380,8 +374,8 @@ body {
     font-size: 2em;
   }
   p {
-    font-size: 1.25em;
-		color: @turq;
+    font-size: 1em;
+		color: @black;
   }
   .row {
     .border-radius(20px);
@@ -391,16 +385,32 @@ body {
       cursor: pointer;
     }
   }
+	.cbp_tmlabel {
+		&:hover {
+			opacity: 0.9;
+			cursor: pointer;
+		}
+	}
+	ul {
+		line-height: 18px;
+	}
 }
 
 #contact-section {
-  background-image: url(../contact.jpg);
+  background-image: url(../background.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
+	background-size: cover;
   text-align: center;
-  height: auto;
+  height: 300px;
   h1 {
     margin-bottom: 1em;
+		color: @white;
+		text-align: middle;
+		font-family: HelveticaNeue-Medium;
+		font-weight: bold;
+		letter-spacing: 4px;
+		font-size: 2em;
   }
   a {
     height: 3em;
@@ -504,7 +514,7 @@ body {
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span {
-    font-size: 2em;
+    font-size: 1.5em;
     color: @white;
 		margin-right: 0.5em;
 }
@@ -512,8 +522,8 @@ body {
 /* Right content */
 .cbp_tmtimeline > li .cbp_tmlabel {
     margin: 0 0 15px 25%;
-    background: #3594cb;
-    color: #fff;
+    background: @white;
+    color: @black;
     padding: 2em;
     font-size: 1.2em;
     font-weight: 300;
@@ -550,7 +560,7 @@ body {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: #3594cb;
+    border-right-color: @white;
     border-width: 10px;
     top: 10px;
 }

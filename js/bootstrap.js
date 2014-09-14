@@ -1950,7 +1950,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
   $(document).ready(function () {
 
-    var s = skrollr.init();
+    var s = skrollr.init({forceHeight: false});
   }
   );
 
@@ -1975,7 +1975,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
       $('#skills-link').addClass('selected');
       $('#skills-h').addClass('selected');
     }
-    else if (curScroll + $(window).height() + 100 >= $(document).height()){
+    else if (curScroll + $(window).height() + 50 >= $(document).height()){
       $('#contact-link').addClass('selected');
       $('#contact-h').addClass('selected');
     }

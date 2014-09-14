@@ -36,11 +36,6 @@ body {
   font-family: 'Open Sans';
 }
 #about-section {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
   height: 600px;
   background-color: #31cdc7;
   background-image: url(../background.jpg);
@@ -115,7 +110,6 @@ body {
   color: #000000;
 }
 #picture-section {
-  margin-top: 600px;
   background-color: #31cdc7;
   position: relative;
 }
@@ -337,8 +331,8 @@ body {
   font-size: 2em;
 }
 #project-section p {
-  font-size: 1.25em;
-  color: #31cdc7;
+  font-size: 1em;
+  color: #000000;
 }
 #project-section .row {
   -webkit-border-radius: 20px;
@@ -353,15 +347,29 @@ body {
   background: #ddd;
   cursor: pointer;
 }
+#project-section .cbp_tmlabel:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+#project-section ul {
+  line-height: 18px;
+}
 #contact-section {
-  background-image: url(../contact.jpg);
+  background-image: url(../background.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: cover;
   text-align: center;
-  height: auto;
+  height: 300px;
 }
 #contact-section h1 {
   margin-bottom: 1em;
+  color: #ffffff;
+  text-align: middle;
+  font-family: HelveticaNeue-Medium;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 2em;
 }
 #contact-section a {
   height: 3em;
@@ -443,15 +451,15 @@ body {
   text-align: right;
 }
 .cbp_tmtimeline > li .cbp_tmtime span {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #ffffff;
   margin-right: 0.5em;
 }
 /* Right content */
 .cbp_tmtimeline > li .cbp_tmlabel {
   margin: 0 0 15px 25%;
-  background: #3594cb;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   padding: 2em;
   font-size: 1.2em;
   font-weight: 300;
@@ -484,7 +492,7 @@ body {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-right-color: #3594cb;
+  border-right-color: #ffffff;
   border-width: 10px;
   top: 10px;
 }
