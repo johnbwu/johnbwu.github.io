@@ -10,6 +10,9 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
+	a, a:hover, a:active, a:visited {
+	    text-decoration:none;
+	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -2085,7 +2088,7 @@
 				display: none;
 			}
 
-			.image.avatar img {
+			.image.avatar {
 				border-radius: 100%;
 				background-color: white;
 				width: 100%;
@@ -2510,7 +2513,7 @@
 	#footer {
 		bottom: 0;
 		left: 0;
-		padding: 0 4em 6em 0;
+		padding: 0 4em 4em 0;
 		position: fixed;
 		text-align: right;
 		width: 35%;
